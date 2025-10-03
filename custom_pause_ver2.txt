@@ -13,6 +13,4 @@ M25 ; pause
 
 M82 ; set extruder to absolute mode (important!)
 G92 E0 ; reset extrusion position
-G1 E5 F300           ; purge a bit to re-prime
-
 
