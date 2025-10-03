@@ -6,12 +6,12 @@ G90
 G1 X5 Y5 F3600    ; park to X5 Y5 at 3600 mm/min (3600/60 = 60 mm/s)
 G1 Y235 F3600       ; move bed forward (max Y)
 
-M0 Insert magnet (step 1)
-M0 Confirm magnet inserted (step 2)
-M0 Final confirm to resume (step 3)
+M25 ; pause
 
-G91
-G1 E2 F1800     ; re-prime
-G90
+; >>> after user resumes <<<
+
+M82 ; set extruder to absolute mode (important!)
+G92 E0 ; reset extrusion position
+G1 E5 F300           ; purge a bit to re-prime
 
 
