@@ -1,0 +1,12 @@
+M300 ; beep
+G91
+G1 E-2 F1800      ; retract 2 mm (1800/60 = 30 mm/s) - optional
+G1 Z10 F300       ; lift 10 mm (300/60 = 5 mm/s)
+G90
+G1 X5 Y5 F3600    ; park to X5 Y5 at 3600 mm/min (3600/60 = 60 mm/s)
+M25
+G91
+G1 E2 F1800     ; re-prime
+G90
+
+
